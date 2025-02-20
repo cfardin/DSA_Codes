@@ -57,7 +57,7 @@ int main(){
         cin >> e;
         s.push(e);
     }
-    s.pop() /// this will remove the top element
+    s.pop(); /// this will remove the top element
     cout << s.peek() << endl; /// to see the new top element 
 
 }
