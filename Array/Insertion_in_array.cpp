@@ -12,21 +12,11 @@ void insertion(int arr[], int& n, int pos, int value){
     arr[pos] = value;
     n++;
 }
-void deletion(int arr[], int& n, int pos){
-    if(pos >= n || pos < 0){
-        cout << "out of order" << endl;
-        return;
-    }
-    for(int i=pos; i< n-1; i++){
-        arr[i] = arr[i+1];
-    }
-    n--;
-}
 
 
 int main(){
-    int arr[] = {10, 20, 30, 40, 50};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int arr[101] = {10, 20, 30, 40, 50};
+    int n = 5; // elements in array
 
     cout << "Original array :" << endl;
     for(int i=0; i<n; i++){
@@ -43,14 +33,6 @@ int main(){
         cout << arr[i] << " ";
     }
     cout << endl;
-
-    ///removing an element
-    cout << "Position of the number to remove: ";
-    cin >> p;
-    deletion(arr, n, p);
-    cout << "After removing :" << endl;
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
-    }
+    
     return 0;
 }
